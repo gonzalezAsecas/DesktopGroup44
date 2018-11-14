@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" 
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" 
+      prefWidth="1024.0" xmlns="http://javafx.com/javafx/9.0.1" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="project.view.controller.SignUpController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Pane VBox.vgrow="ALWAYS" />
+            <Pane prefHeight="70.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label layoutX="149.0" layoutY="-3.0" text="SignUp" textFill="#237bf7">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label text="Full name:" textFill="#237bf7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFName">
+               <tooltip>
+                  <Tooltip fx:id="ttName" text="Write your name and your surname." />
+               </tooltip>
+            </TextField>
+            <Label fx:id="lblEmail" text="Email:" textFill="#237bf7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFEmail" promptText="example@example.com" />
+            <Label fx:id="lblUser" text="Username:" textFill="#237bf7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFUser">
+               <tooltip>
+                  <Tooltip fx:id="ttLogin" text="Write a name for the login with a minimum of 4 character  and a maximum of 16 character." />
+               </tooltip>
+            </TextField>
+            <Label fx:id="lblPassword" text="Password:" textFill="#237bf7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane VBox.vgrow="NEVER">
+               <children>
+                  <TextField fx:id="txtFPassword" prefWidth="350.0" visible="false" />
+                  <PasswordField fx:id="pwPassword" prefWidth="350.0">
+                     <tooltip>
+                        <Tooltip fx:id="ttPassword" text="Write a password with a minimum of 4 characters and maximum of 16 characters." />
+                     </tooltip>
+                  </PasswordField>
+                  <Button fx:id="btnPassShow" layoutX="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="lblRpPassword" text="Repeat password:" textFill="#237bf7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane VBox.vgrow="NEVER">
+               <children>
+                  <TextField fx:id="txtFRpPassword" prefWidth="350.0" visible="false" />
+                  <PasswordField fx:id="pwRpPassword" prefWidth="350.0">
+                     <tooltip>
+                        <Tooltip fx:id="ttPassword1" text="Write a password with a minimum of 4 characters and maximum of 16 characters. " />
+                     </tooltip>
+                  </PasswordField>
+                  <Button fx:id="btnRpPassShow" layoutX="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="50.0" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="btnSignUp" disable="true" layoutX="180.0" layoutY="13.0" mnemonicParsing="false" text="SignUp">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancel" layoutX="300.0" layoutY="13.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="74.0" text="Cancel">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Pane VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
